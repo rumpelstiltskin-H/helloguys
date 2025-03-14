@@ -1,0 +1,141 @@
+:root {
+    --primary-gradient: linear-gradient(45deg, #6b2cf5, #d450e6);
+    --primary-color: #6b2cf5;
+    --text-color:black;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    background:whitesmoke;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 600px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.left-side {
+    flex: 1;
+    background:url('animation\ work\ GIF\ by\ Rafael.gif')no-repeat center center/cover;
+    height: 100vh;
+    color: var(--white);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.left-side h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.left-side p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+
+.right-side {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-container h2 {
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.continue-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-gradient);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.arrow {
+    transition: transform 0.3s;
+}
+
+.continue-btn:hover .arrow {
+    transform: translateX(5px);
+}
+
+.divider {
+    text-align: center;
+    color: #888;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background: #ddd;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}

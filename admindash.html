@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StAnns SpotReserve - Admin Dashboard</title>
+    <link rel="stylesheet" href="admindash.css" />
+  </head>
+  <body>
+    <div class="admin-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img src="logo.png" alt="Logo" />
+          <h2>Admin Panel</h2>
+        </div>
+        <nav class="nav-menu">
+          <a href="#" class="nav-item active" data-tab="dashboard">
+            <span class="icon">📊</span>
+            Dashboard
+          </a>
+          <a href="#" class="nav-item" data-tab="bookings">
+            <span class="icon">📅</span>
+            Bookings
+          </a>
+          <a href="#" class="nav-item" data-tab="requests">
+            <span class="icon">📨</span>
+            Requests
+          </a>
+          <a href="#" class="nav-item" data-tab="feedback">
+            <span class="icon">💭</span>
+            Feedback
+          </a>
+          <a href="#" class="nav-item" data-tab="venues">
+            <span class="icon">🏢</span>
+            Venues
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header class="top-bar">
+          <div class="search-bar">
+            <input type="text" placeholder="Search..." />
+          </div>
+          <div class="admin-profile">
+            <span class="notifications">🔔</span>
+            <div class="admin-info">
+              <span class="admin-name">Admin</span>
+              <img src="i2(1).png" alt="Admin" class="admin-avatar" />
+            </div>
+          </div>
+        </header>
+
+        <!-- Dashboard Overview -->
+        <div class="dashboard-content active" id="dashboard">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <h3>Total Bookings</h3>
+              <p class="stat-number">156</p>
+              <span class="stat-trend positive">↑ 12%</span>
+            </div>
+            <div class="stat-card">
+              <h3>Pending Requests</h3>
+              <p class="stat-number">23</p>
+              <span class="stat-trend negative">↑ 5%</span>
+            </div>
+            <div class="stat-card">
+              <h3>Available Venues</h3>
+              <p class="stat-number">8</p>
+              <span class="stat-trend neutral">−</span>
+            </div>
+            <div class="stat-card">
+              <h3>New Feedback</h3>
+              <p class="stat-number">12</p>
+              <span class="stat-trend positive">↑ 8%</span>
+            </div>
+          </div>
+
+          <div class="recent-activity">
+            <h3>Recent Activity</h3>
+            <div class="activity-list">
+              <div class="activity-item">
+                <span class="activity-icon">📅</span>
+                <div class="activity-details">
+                  <p>New booking for Main Auditorium</p>
+                  <span class="activity-time">2 minutes ago</span>
+                </div>
+              </div>
+              <div class="activity-item">
+                <span class="activity-icon">📨</span>
+                <div class="activity-details">
+                  <p>New request from Department of CS</p>
+                  <span class="activity-time">15 minutes ago</span>
+                </div>
+              </div>
+              <div class="activity-item">
+                <span class="activity-icon">💭</span>
+                <div class="activity-details">
+                  <p>New feedback received</p>
+                  <span class="activity-time">1 hour ago</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bookings Management -->
+        <div class="dashboard-content" id="bookings">
+          <h2>Manage Bookings</h2>
+          <div class="bookings-list">
+            <div class="booking-item">
+              <div class="booking-info">
+                <h4>Main Auditorium</h4>
+                <p>Annual Day Function</p>
+                <span class="booking-date">March 15, 2024</span>
+              </div>
+              <div class="booking-actions">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-cancel">Cancel</button>
+              </div>
+            </div>
+            <div class="booking-item">
+              <div class="booking-info">
+                <h4>AV Room 101</h4>
+                <p>Department Meeting</p>
+                <span class="booking-date">March 16, 2024</span>
+              </div>
+              <div class="booking-actions">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-cancel">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Requests Tab -->
+        <div class="dashboard-content" id="requests">
+          <h2>Pending Requests</h2>
+          <div class="requests-list">
+            <div class="request-item priority">
+              <div class="request-info">
+                <h4>Principal's Office</h4>
+                <p>Board Meeting</p>
+                <span class="request-date">March 20, 2024</span>
+                <span class="priority-tag">High Priority</span>
+              </div>
+              <div class="request-actions">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+              </div>
+            </div>
+            <div class="request-item">
+              <div class="request-info">
+                <h4>Department of Science</h4>
+                <p>Science Exhibition</p>
+                <span class="request-date">March 25, 2024</span>
+              </div>
+              <div class="request-actions">
+                <button class="btn-approve">Approve</button>
+                <button class="btn-reject">Reject</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feedback Management -->
+        <div class="dashboard-content" id="feedback">
+          <h2>User Feedback</h2>
+          <div class="feedback-list">
+            <div class="feedback-item">
+              <div class="feedback-header">
+                <h4>John Doe</h4>
+                <div class="rating">★★★★☆</div>
+              </div>
+              <p class="feedback-text">
+                Great service and easy booking process!
+              </p>
+              <span class="feedback-date">March 10, 2024</span>
+              <div class="feedback-actions">
+                <button class="btn-respond">Respond</button>
+                <button class="btn-archive">Archive</button>
+              </div>
+            </div>
+            <div class="feedback-item">
+              <div class="feedback-header">
+                <h4>Jane Smith</h4>
+                <div class="rating">★★★★★</div>
+              </div>
+              <p class="feedback-text">The venue was perfect for our event.</p>
+              <span class="feedback-date">March 9, 2024</span>
+              <div class="feedback-actions">
+                <button class="btn-respond">Respond</button>
+                <button class="btn-archive">Archive</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="admindash.js"></script>
+    <button>
+      <a href="index.html" class="blue-button">Go back to home page</a>
+    </button>
+
+    <style>
+      .blue-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: blue;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .blue-button:hover {
+        background-color: darkblue;
+      }
+    </style>
+     
+  </body>
+</html>

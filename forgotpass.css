@@ -1,0 +1,132 @@
+:root {
+    --primary-color: #5B8FB9;
+    --text-color: #333;
+    --secondary-text: #666;
+    --background: url('stvr_t-trg_a.gif') no-repeat center center/cover; ;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--background);
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    opacity:0.8;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.illustration {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.illustration img {
+    width: 200px;
+    height: auto;
+}
+
+.content {
+    text-align: center;
+}
+
+h1 {
+    color: black;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: var(--secondary-text);
+    margin-bottom: 30px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(91, 143, 185, 0.1);
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.try-another {
+    color: var(--secondary-text);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.try-another:hover {
+    color: var(--primary-color);
+}
+
+.next-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 0.95em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.next-btn:hover {
+    background: #4a7da3;
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 30px 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .next-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StAnns SpotReserve</title>
+    <link rel="stylesheet" href="bookingstyles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="logo.png" alt="Logo" />
+        <h1>StAnns SpotReserve</h1>
+      </div>
+      <div class="user-profile">
+        <span class="user-initial">USER</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="search-section">
+        <input type="text" id="searchInput" placeholder="Search venues..." />
+        <input type="date" id="dateInput" />
+        <button onclick="searchVenues()">Find Venues</button>
+      </div>
+
+      <div class="venues-grid" id="venuesGrid"></div>
+    </main>
+
+    <script src="booking.js">
+      function showWelcomeMessage() {
+          alert("Welcome to the Booking Page! You are now logged in and can make your bookings.");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background: url('stanns.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.logo {
+  position: absolute;  
+  top: 20px;           
+  left: 20px;         
+  width: 80px;         
+  height: auto;        
+}
+
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin: 10px 0 20px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  background: #008080;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+  background: #0A2463;
+  transform: scale(1.1);
+}
+
+.about-us {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hall-images {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+}
+
+.hall-card {
+  width: 30%;
+  text-align: center;
+}
+
+.hall-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+footer {
+  background:darkblue;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #87CEEB;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="signupstyles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-side">
+        <div class="logo">
+          <img src="logo.png" width="80" height="80" />
+        </div>
+        <p style="font-size: 80px">Welcome !</p>
+        <p>Your Spot Awaits—Sign Up Today!</p>
+      </div>
+      <div class="right-side">
+        <div class="form-container">
+          <h2>Sign-up, Login and Start Booking!</h2>
+          <form id="signInForm" onsubmit="return redirectToLogin()">
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                placeholder="Department Name"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                required
+              />
+            </div>
+            <button type="submit" class="continue-btn">
+              CONTINUE
+              <span class="arrow">→</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function redirectToLogin() {
+        // Get input values
+        const deptName = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        // Check if all fields are filled
+        if (!deptName || !email || !password) {
+          alert("Please fill in all fields!");
+          return false; // Prevent form submission
+        }
+
+        // Redirect to login page
+        window.location.href = "loginpage.html";
+        return false; // Prevent default form submission
+      }
+    </script>
+  </body>
+</html>
